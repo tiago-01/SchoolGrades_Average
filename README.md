@@ -1,4 +1,4 @@
-# SchoolGrades_Average
+# SchoolGrades_Average - Language C
 
 Exercise:
 
