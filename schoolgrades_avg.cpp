@@ -6,15 +6,11 @@
 #define false 0
 
 /*
-Construa um algoritmo que leia as três notas de
-50 alunos de uma turma. Para cada aluno, calcule a
-média ponderada, como segue:
-MP = ( n1*2 + n2*4 + n3*3 ) / 10. Além disso,
-calcule a média geral da
-turma. Mostre a média de cada aluno e uma mensagem "Aprovado",
-caso a média seja maior ou igual a
-sete, e uma mensagem "Reprovado", caso contrário. No final,
-mostre a média geral
+Build an algorithm to read 3 grades of a class with 5 students. 
+For each student, calculate the average like: avg = (g1 + g2 + g3)/3. 
+Grades are between 0(lowest) and 20(maximum).
+Besides that, calculate the class average. 
+Show the students average with a message like "Aproved" case the average is greater than 10 or "Failed" if below 10.
 */
 
 void checkifexists(struct aluno *a);
