@@ -29,18 +29,16 @@ struct schoolclass{
     float average;
 };
 
-void checkifexists(struct student *a){
+int checkifexists(int position,struct student *a,int number){
 	int i=0;
-	int number=0;
-	here:
-	scanf("%i",&number);
 	for (i=0;i<5;i++){
 		if (a[i].number==number){
-			printf("Existing number\nWrite the right one: ");
-			goto here;
+			printf("Existing number\n");
+			return false;
 		}
-		a[i].number=number;
 	}
+	a[position].number=number;
+    return true;
 }
 
 int checkifisvalid(int number){  
@@ -72,8 +70,13 @@ void getgrades(struct student *a){
 	float grade1 = 0; float grade2 = 0; float grade3 = 0;
     
 	for (i=0;i<5;i++){
+		here:
 		printf("Student number':");
-		checkifexists(a);
+		scanf("%i",&number);
+		int position = i;
+		if (checkifexists(position,a,number) == false) {
+		  goto here;
+		}
 		
 		g1:	
 		printf("Grade 1 = ");
